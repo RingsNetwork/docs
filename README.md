@@ -1,5 +1,7 @@
 # Introduction
 
+<figure><img src="https://camo.githubusercontent.com/1e8e8235037707bbdc8e2a24242e5874b8be89b971f0ae552585b46398971b6f/68747470733a2f2f7374617469632e72696e67736e6574776f726b2e696f2f72696e67736e6574776f726b5f6c6f676f2e706e67" alt=""><figcaption></figcaption></figure>
+
 Rings Network is A peer-to-peer (P2P) network layer implementation based on the Chord algorithm. It does not have a consensus layer and is very lightweight, yet it can support up to 2^160 nodes online.
 
 Additionally, due to its support for webassembly, Rings Node can easily run in a browser environment. The core concept of Rings Network is to divide the entire P2P network into several ring-shaped structures, where each node in the ring maintains its own data and routing information for other nodes in the network using the Chord DHT. Communication between nodes in the same ring is possible, while communication between different rings requires specific routing nodes.

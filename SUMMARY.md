@@ -1,6 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Chord](chord.md)
+* [DHT](chord.md)
 * [Handshake](handshake.md)
 * [API](jsonrpc.md)
