@@ -4,3 +4,4 @@
 * [DHT](chord.md)
 * [Handshake](handshake.md)
 * [API](jsonrpc.md)
+* [Start](start.md)
