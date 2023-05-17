@@ -1,4 +1,4 @@
-# Compile to Wasm
+# Build for Wasm
 
 We offer several ways to use Wasm Rings, including:
 
@@ -37,4 +37,3 @@ Or build with `wasm-pack`
 ```
 wasm-pack build --scope ringsnetwork -t web --no-default-features --features browser --features console_error_panic_hook
 ```
-

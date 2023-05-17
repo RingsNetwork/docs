@@ -2,7 +2,7 @@
 description: Start from using rings-node
 ---
 
-# Getting started
+# Install Native Node
 
 ## Installation
 
