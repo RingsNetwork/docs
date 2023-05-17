@@ -6,7 +6,15 @@ Rings Network is a purely peer-to-peer network implementation. We use WebRTC to 
 
 By introducing decentralized PKI (public key infrastructure) such as Ethereum and Bitcoin, we have built a series of cryptographic-based network infrastructures. For example, we support end-to-end and hop-by-hop encryption systems, service discovery and registration systems based on resource hashes, and so on.
 
-## # Beginning
+## # Getting Start
+
+Rings network is building with Rust language, 我们将代码编译至WASM或Native来满足不同场景的需求。为了更好的理解Rings Network，我们建议你从Native Node开始。
+
+### Start with Native Node
+
+Before Getting Start, To install Rust, follow the [official instructions](https://www.rust-lang.org/tools/install).
+
+[getting-started.md](getting-started.md "mention")
 
 
 
