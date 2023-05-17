@@ -4,4 +4,5 @@
 * [DHT](chord.md)
 * [Handshake](handshake.md)
 * [API](jsonrpc.md)
-* [Getting started](getting-started.md)
+* [Install Native Node](install-native-node.md)
+* [Compile to Wasm](compile-to-wasm.md)
