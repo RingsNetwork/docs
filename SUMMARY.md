@@ -15,4 +15,4 @@
 
 ## Features
 
-* [Hidden services](features/hidden-services.md)
+* [Decentralized services](features/decentralized-services.md)

@@ -1,4 +1,4 @@
-# Hidden services
+# Decentralized services
 
 Rings Network enables users to integrate services into its decentralized network. Its underlying mechanism relies on Rings DHT for service registration and discovery. Setting up hidden services is a straightforward process that decentralizes any service with just a few simple steps.
 
