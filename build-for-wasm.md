@@ -14,6 +14,16 @@ To fetch the SDK from `npm`, just:
 npm i @ringsnetwork/rings-node
 ```
 
+If you want to use the latest version of Rings Network, you can also directly incorporate the latest version or a specific branch of Rings Network into your Node.js project by modifying the package.json file. For example:
+
+```
+# package.json
+"@ringsnetwork/rings-node": "https://github.com/RingsNetwork/rings-node.git#35412577e3369241add837cdc580435947c997d1",
+
+```
+
+
+
 ### Rings Browser Extension
 
 Rings Browser Extension is not released yet, but you can check the implementation at
