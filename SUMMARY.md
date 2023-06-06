@@ -10,8 +10,8 @@
 ## Advanced topic
 
 * [Architecture](advanced-topic/architecture.md)
-* [Handshake](advanced-topic/handshake.md)
-* [DHT](advanced-topic/chord.md)
+* [How handshake works](advanced-topic/handshake.md)
+* [DHT - Network Layer](advanced-topic/chord.md)
 * [API](jsonrpc.md)
 * [config.yaml](advanced-topic/config.yaml.md)
 
