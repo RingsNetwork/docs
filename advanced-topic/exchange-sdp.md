@@ -113,7 +113,7 @@ curl -X POST \
 --data '{"jsonrpc": "2.0", 
          "id": 1, "method": 
          "acceptAnswer", 
-         "params": ["<b58 encoded answer"]}' \
+         "params": ["<b58 encoded answer>"]}' \
 "http://127.0.0.1:50000"
 ```
 
@@ -122,7 +122,7 @@ It will respond:
 ```bash
 {"jsonrpc":"2.0","result":{
     "did":"<did2>","state":"checking",
-    "transport_id":"<uuid of transport"
+    "transport_id":"<uuid of transport>"
 },"id":1}%
 ```
 
