@@ -338,8 +338,8 @@ curl -X POST \
 
 #### RESPONSE
 
-* `peers` - list of connected peers 
-  - `transport_id` - id of the transport 
+* `peers` - list of connected peers
+  - `transport_id` - id of the transport
   - `did` - did of remote peer
   - `state` - transport state
 
@@ -514,7 +514,7 @@ curl -X POST \
   - `path` - resource path
   - `timeout` - timeout of remote request, optional
   - `headers` - remote request with headers, optional
-  - `body` - reuqest body what you want to send to remote service, optional
+  - `body` - request body what you want to send to remote service, optional
 
 #### RESPONSE
 
@@ -620,7 +620,7 @@ curl -X POST \
 ```
 
 
-### publishMessageToTopic 
+### publishMessageToTopic
 
 Publish data message to specific topic
 
@@ -660,7 +660,7 @@ curl -X POST \
 ```
 
 
-### fetchMessageToTopic 
+### fetchMessageToTopic
 
 Fetch message from specific topic
 
