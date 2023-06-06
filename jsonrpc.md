@@ -1,4 +1,4 @@
-# JSON-RPC API endpoints
+# API
 
 ## How To
 
@@ -23,38 +23,37 @@ TODO
 
 ## JSON-RPC methods
 
-This section lists the rings JSON-RPC API endpoints. You can call these [APIs using a variety of tools](#Make_request).
+This section lists the rings JSON-RPC API endpoints. You can call these [APIs using a variety of tools](jsonrpc.md#Make\_request).
 
 ### Error codes
 
 The follow list contains all possible error codes and associated messages:
 
-|code|meaning|category|
-|--- |---    |---     |
-|-32000|Internal service error|standard|
-|-32001|Connect remote server with error occurred|standard|
-|-32002|Push or find pending transport failed|standard|
-|-32003|Transport not found|standard|
-|-32004|Create new `transport` failed|standard|
-|-32005|Close `transport` failed|standard|
-|-32006|Encode data error|standard|
-|-32007|Decode data error|standard|
-|-32008|Register ice failed|standard|
-|-32009|Create new `offer` failed|standard|
-|-32010|Create new `answder` failed|standard|
-|-32011|Invalid transport id|standard|
-|-32012|Invalid did|standard|
-|-32013|Invalid method|standard|
-|-32014|Send message with error occurred|standard|
-|-32015|Permission requires to do something|standard|
-|-32016|VNode action error|standard|
-|-32017|Register service with error occurred|standard|
-|-32018|Invalid data|standard|
-|-32019|Invalid message|standard|
-|-32020|Invalid service|standard|
-|-32021|Invalid address|standard|
-|-32022|Invalid auth data|standard|
-
+| code   | meaning                                   | category |
+| ------ | ----------------------------------------- | -------- |
+| -32000 | Internal service error                    | standard |
+| -32001 | Connect remote server with error occurred | standard |
+| -32002 | Push or find pending transport failed     | standard |
+| -32003 | Transport not found                       | standard |
+| -32004 | Create new `transport` failed             | standard |
+| -32005 | Close `transport` failed                  | standard |
+| -32006 | Encode data error                         | standard |
+| -32007 | Decode data error                         | standard |
+| -32008 | Register ice failed                       | standard |
+| -32009 | Create new `offer` failed                 | standard |
+| -32010 | Create new `answder` failed               | standard |
+| -32011 | Invalid transport id                      | standard |
+| -32012 | Invalid did                               | standard |
+| -32013 | Invalid method                            | standard |
+| -32014 | Send message with error occurred          | standard |
+| -32015 | Permission requires to do something       | standard |
+| -32016 | VNode action error                        | standard |
+| -32017 | Register service with error occurred      | standard |
+| -32018 | Invalid data                              | standard |
+| -32019 | Invalid message                           | standard |
+| -32020 | Invalid service                           | standard |
+| -32021 | Invalid address                           | standard |
+| -32022 | Invalid auth data                         | standard |
 
 Example error response:
 
@@ -106,7 +105,6 @@ curl -X POST \
 }
 ```
 
-
 ### connectPeerViaHttp
 
 Connect a peer with peer's jsonrpc endpoint
@@ -145,7 +143,6 @@ curl -X POST \
 }
 ```
 
-
 ### connectWithDid
 
 Connect a peer with peer's did
@@ -156,8 +153,7 @@ Connect a peer with peer's did
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -173,7 +169,6 @@ curl -X POST \
 
 #### RESPONSE
 
-
 #### EXAMPLE
 
 ```json
@@ -183,7 +178,6 @@ curl -X POST \
     "result": null
 }
 ```
-
 
 ### connectWithSeed
 
@@ -195,8 +189,7 @@ Connect a peer with peer's seed
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -212,7 +205,6 @@ curl -X POST \
 
 #### RESPONSE
 
-
 #### EXAMPLE
 
 ```json
@@ -222,7 +214,6 @@ curl -X POST \
     "result": null
 }
 ```
-
 
 ### createOffer
 
@@ -234,8 +225,7 @@ Create an offer for connection
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -252,7 +242,7 @@ curl -X POST \
 #### RESPONSE
 
 * `transport_id`: id of the transport
-* `ice`:  ice message
+* `ice`: ice message
 
 #### EXAMPLE
 
@@ -267,7 +257,6 @@ curl -X POST \
 }
 ```
 
-
 ### answerOffer
 
 Answer an offer for connection
@@ -278,8 +267,7 @@ Answer an offer for connection
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -296,7 +284,7 @@ curl -X POST \
 #### RESPONSE
 
 * `transport_id`: id of the transport
-* `ice`:  ice message
+* `ice`: ice message
 
 #### EXAMPLE
 
@@ -311,7 +299,6 @@ curl -X POST \
 }
 ```
 
-
 ### listPeers
 
 List all node connected peers
@@ -322,8 +309,7 @@ List all node connected peers
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -339,9 +325,9 @@ curl -X POST \
 #### RESPONSE
 
 * `peers` - list of connected peers
-  - `transport_id` - id of the transport
-  - `did` - did of remote peer
-  - `state` - transport state
+  * `transport_id` - id of the transport
+  * `did` - did of remote peer
+  * `state` - transport state
 
 #### EXAMPLE
 
@@ -359,7 +345,6 @@ curl -X POST \
 }
 ```
 
-
 ### closeConnection
 
 Close a connected connection with the did of peer
@@ -370,8 +355,7 @@ Close a connected connection with the did of peer
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -397,7 +381,6 @@ curl -X POST \
 }
 ```
 
-
 ### listPendings
 
 List all pending connections
@@ -408,8 +391,7 @@ List all pending connections
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -425,8 +407,8 @@ curl -X POST \
 #### RESPONSE
 
 * `transport_infos` - list of all pending transports
-    - `transport_id` - id of the transport
-    - `state` - state of the transport
+  * `transport_id` - id of the transport
+  * `state` - state of the transport
 
 #### EXAMPLE
 
@@ -443,7 +425,6 @@ curl -X POST \
 }
 ```
 
-
 ### closePendingTransport
 
 Close a specific pending transport
@@ -454,8 +435,7 @@ Close a specific pending transport
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -481,7 +461,6 @@ curl -X POST \
 }
 ```
 
-
 ### sendHttpRequestMessage
 
 Send a http request message to remote peer, the remote peer should provide the service you want to use
@@ -492,8 +471,7 @@ Send a http request message to remote peer, the remote peer should provide the s
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -509,12 +487,12 @@ curl -X POST \
 ```
 
 * HTTP-REQUEST-ARG
-  - `name` - service name
-  - `method` - http method
-  - `path` - resource path
-  - `timeout` - timeout of remote request, optional
-  - `headers` - remote request with headers, optional
-  - `body` - request body what you want to send to remote service, optional
+  * `name` - service name
+  * `method` - http method
+  * `path` - resource path
+  * `timeout` - timeout of remote request, optional
+  * `headers` - remote request with headers, optional
+  * `body` - request body what you want to send to remote service, optional
 
 #### RESPONSE
 
@@ -532,7 +510,6 @@ curl -X POST \
 }
 ```
 
-
 ### sendSimpleTextMessage
 
 Send simple text message to a peer
@@ -543,8 +520,7 @@ Send simple text message to a peer
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -575,7 +551,6 @@ curl -X POST \
 }
 ```
 
-
 ### sendCustomMessage
 
 Send custom message to a peer
@@ -586,8 +561,7 @@ Send custom message to a peer
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -619,7 +593,6 @@ curl -X POST \
 }
 ```
 
-
 ### publishMessageToTopic
 
 Publish data message to specific topic
@@ -630,8 +603,7 @@ Publish data message to specific topic
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -648,7 +620,6 @@ curl -X POST \
 
 #### RESPONSE
 
-
 #### EXAMPLE
 
 ```json
@@ -658,7 +629,6 @@ curl -X POST \
     "result": {}
 }
 ```
-
 
 ### fetchMessageToTopic
 
@@ -670,8 +640,7 @@ Fetch message from specific topic
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -702,7 +671,6 @@ curl -X POST \
 }
 ```
 
-
 ### registerService
 
 Register custom service to rings network
@@ -713,8 +681,7 @@ Register custom service to rings network
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -740,7 +707,6 @@ curl -X POST \
 }
 ```
 
-
 ### lookupService
 
 Lookup custom service from rings network, you can find all dids of node which provide service you want.
@@ -751,8 +717,7 @@ Lookup custom service from rings network, you can find all dids of node which pr
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 
@@ -783,11 +748,9 @@ curl -X POST \
 }
 ```
 
-
 ### pollMessage
 
-Use this method, you can pull messages received by this node, to provide your custom service,
-But we suggest use `websocket` endpoint realtime get messages.
+Use this method, you can pull messages received by this node, to provide your custom service, But we suggest use `websocket` endpoint realtime get messages.
 
 #### REQUEST
 
@@ -795,8 +758,7 @@ But we suggest use `websocket` endpoint realtime get messages.
 
 #### HEADERS
 
-`Content-Type: application/json`
-`X-SIGNATURE: YOUR-SIGNATURE`
+`Content-Type: application/json` `X-SIGNATURE: YOUR-SIGNATURE`
 
 #### EXAMPLE
 

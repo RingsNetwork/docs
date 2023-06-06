@@ -39,7 +39,7 @@ backend:
 ...
 ```
 
-
+Once all the configurations are set up, you can use the command `rings run` to start hosting your decentralized services.
 
 
 

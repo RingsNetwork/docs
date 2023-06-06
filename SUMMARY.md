@@ -10,7 +10,7 @@
 * [Architecture](advanced-topic/architecture.md)
 * [Handshake](advanced-topic/handshake.md)
 * [DHT](advanced-topic/chord.md)
-* [API](advanced-topic/jsonrpc.md)
+* [API](jsonrpc.md)
 * [config.yaml](advanced-topic/config.yaml.md)
 
 ## Features
