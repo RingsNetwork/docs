@@ -42,7 +42,7 @@ measure_storage:
 
 ## Handshake !
 
-### Launch two nodes with command:
+### Launch two nodes:
 
 ```bash
 cargo run -- run -c config1.yaml
