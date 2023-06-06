@@ -1,9 +1,11 @@
 # Table of contents
 
+## Introduction
+
 * [Introduction](README.md)
-* [Install Native Node](getting-started.md)
-* [Host a Native Node](host-a-native-node.md)
-* [Build for Wasm](build-for-wasm.md)
+* [Install Native Node](introduction/getting-started.md)
+* [Host a Native Node](introduction/host-a-native-node.md)
+* [Build for Wasm](introduction/build-for-wasm.md)
 
 ## Advanced topic
 
