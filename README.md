@@ -1,4 +1,4 @@
-# Introduction
+# 🚀 Start Here
 
 <figure><img src="https://camo.githubusercontent.com/1e8e8235037707bbdc8e2a24242e5874b8be89b971f0ae552585b46398971b6f/68747470733a2f2f7374617469632e72696e67736e6574776f726b2e696f2f72696e67736e6574776f726b5f6c6f676f2e706e67" alt=""><figcaption></figcaption></figure>
 
@@ -14,11 +14,11 @@ Rings Network is being built with the Rust language. We compile the code into WA
 
 Before Getting Start, Rust is required, follow the [official instructions](https://www.rust-lang.org/tools/install).
 
-[getting-started.md](introduction/getting-started.md "mention")
+[getting-started.md](getting-started.md "mention")
 
 #### Start with Wasm Node
 
-[build-for-wasm.md](introduction/build-for-wasm.md "mention")
+[build-for-wasm.md](build-for-wasm.md "mention")
 
 ## # Architecture
 
