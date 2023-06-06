@@ -10,3 +10,7 @@ Rings Network supports two ways for establishing connections: Relay and Direct.
 * Direct: This refers to establishing peer-to-peer connections by directly exchanging SDP information. Direct connections are more decentralized in nature.
 
 Both approaches have their advantages. Relay connections are more convenient, while direct connections provide a more decentralized approach.
+
+To understand more about how handshake works, you may like to read:
+
+[exchange-sdp.md](exchange-sdp.md "mention")
