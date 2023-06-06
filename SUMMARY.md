@@ -11,6 +11,7 @@
 
 * [Architecture](advanced-topic/architecture.md)
 * [How handshake works](advanced-topic/handshake.md)
+* [Exchange SDP](advanced-topic/exchange-sdp.md)
 * [DHT - Network Layer](advanced-topic/chord.md)
 * [API](jsonrpc.md)
 * [config.yaml](advanced-topic/config.yaml.md)
