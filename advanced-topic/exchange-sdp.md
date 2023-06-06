@@ -40,9 +40,9 @@ measure_storage:
 
 ```
 
-### # Run !
+## Handshake !
 
-We launch two nodes with command:
+### Launch two nodes with command:
 
 ```bash
 cargo run -- run -c config1.yaml
@@ -65,6 +65,8 @@ JSON-RPC endpoint: http://127.0.0.1:50000
 WebSocket endpoint: http://127.0.0.1:50000/ws
 ```
 
+### Create Offer
+
 Then we ask Node1 to create an offer by:
 
 ```bash
@@ -75,7 +77,59 @@ curl -X POST
 "http://127.0.0.1:50000"
 ```
 
-The output is a complex JSON, which including SDP info and candidates. Then we ask Node2 to accept answer:
+The output is a complex JSON, which including SDP info and candidates encoded in base58:
 
+```bash
+{"jsonrpc":"2.0","result":<b58 encoded offer>,"id":1}%
+```
 
+### Accept Offer and Create Answer
 
+Then we ask Node2 to accept the answer:
+
+```bash
+curl -X POST \
+-H "Content-Type: application/json" \
+-H "X-SIGNATURE: <sig2>" \
+--data '{"jsonrpc": "2.0", "id": 1, "method": "answerOffer", \
+        "params": [<b58 encoded offer>]}' 
+"http://127.0.0.1:50001"
+```
+
+Here we will get answer responses by `Node 2`:
+
+```bash
+{"jsonrpc":"2.0","result":"<b58 encoded answer>","id":1}
+```
+
+### Accept Answer
+
+Finally, we send the answer to Node 1 to finish handshake:
+
+```bash
+curl -X POST \
+-H "Content-Type: application/json" \
+-H "X-SIGNATURE: <sig1>" \
+--data '{"jsonrpc": "2.0", 
+         "id": 1, "method": 
+         "acceptAnswer", 
+         "params": ["<b58 encoded answer"]}' \
+"http://127.0.0.1:50000"
+```
+
+It will respond:
+
+```bash
+{"jsonrpc":"2.0","result":{
+    "did":"<did2>","state":"checking",
+    "transport_id":"<uuid of transport"
+},"id":1}%
+```
+
+## Conclusion
+
+So, as you can see here, the handshake process of the Rings Network can be summarized in 3 steps:&#x20;
+
+* 1\. Creating an offer and sending it to the other party;&#x20;
+* 2\. Accepting the offer and replying with an answer;&#x20;
+* 3\. Accepting the answer and completing the handshake.
