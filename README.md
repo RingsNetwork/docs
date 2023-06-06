@@ -24,5 +24,5 @@ Before Getting Start, Rust is required, follow the [official instructions](https
 
 The Rings Network architecture is streamlined into five distinct layers.
 
-&#x20; For more details, please check [architecture.md](architecture.md "mention")
+&#x20; For more details, please check [architecture.md](advanced-topic/architecture.md "mention")
 

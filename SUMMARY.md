@@ -7,5 +7,8 @@
 * [Host a Native Node](host-a-native-node.md)
 * [Build for Wasm](build-for-wasm.md)
 * [API](jsonrpc.md)
-* [Architecture](architecture.md)
-* [config.yaml](config.yaml.md)
+
+## Advanced topic
+
+* [Architecture](advanced-topic/architecture.md)
+* [config.yaml](advanced-topic/config.yaml.md)
