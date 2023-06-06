@@ -16,3 +16,7 @@
 ## Features
 
 * [Decentralized services](features/decentralized-services.md)
+
+***
+
+* [External message handler](external-message-handler.md)
