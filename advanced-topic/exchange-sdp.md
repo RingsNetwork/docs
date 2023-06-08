@@ -70,10 +70,10 @@ WebSocket endpoint: http://127.0.0.1:50000/ws
 Then we ask Node1 to create an offer by:
 
 ```bash
-curl -X POST
--H "Content-Type: application/json"
--H "X-SIGNATURE: <sig1>"
---data '{"jsonrpc": "2.0", "id": 1, "method": "createOffer", "params": []}'
+curl -X POST \
+-H "Content-Type: application/json" \
+-H "X-SIGNATURE: <sig1>" \
+--data '{"jsonrpc": "2.0", "id": 1, "method": "createOffer", "params": []}' \
 "http://127.0.0.1:50000"
 ```
 
@@ -91,8 +91,9 @@ Then we ask Node2 to accept the answer:
 curl -X POST \
 -H "Content-Type: application/json" \
 -H "X-SIGNATURE: <sig2>" \
---data '{"jsonrpc": "2.0", "id": 1, "method": "answerOffer", \
-        "params": [<b58 encoded offer>]}' 
+--data '{"jsonrpc": "2.0", 
+        "id": 1, "method": "answerOffer", 
+        "params": ["<b58 encoded offer>"]}' \
 "http://127.0.0.1:50001"
 ```
 
