@@ -31,7 +31,7 @@ You can also extend the message handler by loading plugins, which is an advanced
 
 In order to facilitate readability, we present the plugin in the WAT format (WebAssembly Text Format). You can generate it using any language, and it can actually run in any environment, such as a browser or native environment (similar to Rings).
 
-We require the wasm plugin to include a function with the signature Fn ExternRef -> ExternRef, named "handler," which will be responsible for handling all requests targeting the extension.
+We require the wasm plugin to include a function with the signature `Fn ExternRef -> ExternRef`, named "handler," which will be responsible for handling all requests targeting the extension.
 
 Loading a wasm plugin is straightforward. You just need to insert the following into your config.yaml file.
 
