@@ -22,7 +22,14 @@ If you want to use the latest version of Rings Network, you can also directly in
 
 ```
 
+As a developer, if you want to build local offline dependencies, you can do the following.&#x20;
 
+````
+```text
+"@ringsnetwork/rings-node": "git+file:../rings-node#master",
+````
+
+Note: The reason for using a git path instead of a local path is that npm, after a certain version, no longer executes the prepare script in local path packages, and rings-node relies on the prepare script to help with wasm compilation.
 
 ### Rings Browser Extension
 
