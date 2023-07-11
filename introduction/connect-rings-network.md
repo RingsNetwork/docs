@@ -1,4 +1,4 @@
-# Touch Network
+# Connect Rings Network
 
 Rings is a peer-to-peer network based on WebRTC transport, and as such, you have multiple ways to establish connections:
 

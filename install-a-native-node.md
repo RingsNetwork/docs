@@ -2,19 +2,21 @@
 description: Start from using rings-node
 ---
 
-# Install Native Node
+# Install a native node
 
 ## Installation
 
 You can install rings-node either from Cargo or from source.
 
-From Cargo:
+### From Cargo:
 
 ```
 cargo install rings-node
 ```
 
-From Source
+ > Rings Network is written in [Rust](https://www.rust-lang.org/). [Cargo](https://crates.io/) is a package management tool for the Rust language. You can learn about how to install and use Cargo [here](https://doc.rust-lang.org/cargo/getting-started/installation.html).
+
+### From Source
 
 ```
 git clone https://github.com/RingsNetwork/rings-node

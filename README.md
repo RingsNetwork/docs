@@ -8,15 +8,15 @@ By introducing decentralized PKI (public key infrastructure) such as Ethereum an
 
 ## # Getting Start
 
-Rings Network is being built with the Rust language. We compile the code into WASM or Native to meet the needs of different scenarios. To better understand Rings Network, we recommend that you start with the Native Node.
+Rings Network is being developed using the Rust programming language. The code can be compiled into either WASM or Native format, depending on the specific requirements of different scenarios. For a better understanding of Rings Network, we suggest starting with a Native Node.
 
 #### Start with Native Node
 
-Before Getting Start, Rust is required, follow the [official instructions](https://www.rust-lang.org/tools/install).
+Before starting, make sure you have Rust installed. Follow the [official instructions](https://www.rust-lang.org/tools/install) to install Rust.
 
-[getting-started.md](getting-started.md "mention")
+[install-a-native-node.md](install-a-native-node.md "mention")
 
-#### Start with Wasm Node
+#### Start with a WASM Node
 
 [build-for-wasm.md](build-for-wasm.md "mention")
 
