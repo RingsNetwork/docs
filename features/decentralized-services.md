@@ -1,5 +1,9 @@
 # Decentralized services
 
+
+
+<figure><img src="../.gitbook/assets/Elder_Ryan_webassembly_p2p_network_627824ef-f0b8-4887-ab7b-c166dac4b4ad.png" alt=""><figcaption></figcaption></figure>
+
 Rings Network enables users to integrate services into its decentralized network. Its underlying mechanism relies on Rings DHT for service registration and discovery. Setting up hidden services is a straightforward process that decentralizes any service with just a few simple steps.
 
 ## Understand de-service
@@ -44,7 +48,7 @@ curl -X POST \
 
 It will return a provider list of de-service, and then you can use the elements in the list to request de-services.
 
-## Request de-services
+### Request de-services
 
 Rings CLI provides a set of tools to assist in requesting de-services. This can be accomplished through the command line or via our Curl API.
 
