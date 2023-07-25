@@ -93,7 +93,7 @@ curl -X POST \
 "http://127.0.0.1:50000"
 ```
 
-## Backend&#x20;
+## Backend
 
 Backends can be classified into various types based on different transmission protocols, such as TCP-Backend, HTTP-Backend, and WASM-Backend. The essence of a backend is that it acts as a custom message handler. It must have a service name and a delegated service path.
 
@@ -139,3 +139,98 @@ backend:
 ```
 
 Once all the configurations are set up, you can use the command `rings run` to start hosting your decentralized services.
+
+## An example of de-service
+
+### Run a simple http json service
+
+We use [json-server](https://github.com/typicode/json-server) as the example http service provider.
+
+1. Install `json-server`
+
+```
+npm install -g json-server
+```
+
+2. Define the data
+
+Create a `db.json` and write the data into the file:
+
+```json
+{
+    "posts": [
+        {
+            "id": 1,
+            "author": "Rings Network de-service",
+            "content": "Decentralize the world!"
+        }
+    ]
+}
+```
+
+3. Run the `json-server`
+
+```
+json-server --watch db.json --port 8000 --host 0.0.0.0
+```
+
+4. Test the server response
+
+You can use `curl` or just visit `http://127.0.0.1:8000/posts` in browsers to check if the `json-server` works fine.
+
+### Run a rings-node(name:node-0) and register the service
+
+1. Install the lastest Rings node
+
+Let's name this node `node-0`
+
+```
+cargo install rings-node
+```
+
+> You can visit [install-a-native-node.md](install-a-native-node.md "mention") for more installation details.
+
+2. Create a config file for `node-0`:
+
+```
+rings init --location ./node0-config.yaml
+```
+
+Edit the config file to register the service:
+
+```
+backend:
+- name: sample_json_server
+  register_service: sample_json_server
+  prefix: http://127.0.0.1:8000
+```
+
+The whole config file would be something like this:
+
+```
+bind: 127.0.0.1:50000
+endpoint_url: http://127.0.0.1:50000
+ecdsa_key: <your-node0-private-key>
+ice_servers: stun://stun.l.google.com:19302
+stabilize_timeout: 20
+external_ip: null
+data_storage:
+  path: <your-data-dir>
+  capacity: 200000000
+measure_storage:
+  path: <your-mesure-dir>
+  capacity: 200000000
+backend:
+- name: sample_json_server
+  register_service: sample_json_server
+  prefix: http://127.0.0.1:8000
+```
+
+3. Run the node
+
+```
+rings run --config ./node0-config.yaml
+```
+
+### Run another rings-node(name:node-1) and request the service
+
