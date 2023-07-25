@@ -16,7 +16,11 @@ This is achieved through a Rings custom backend. By configuring the Rings networ
 
 Every de-service provider can register itself in the network. The Rings network will create a key-value pair for each service in the form of `hash(services_name): [services_provider_did]` and store it using the DHT (Distributed Hash Table) feature across the network. When other network nodes request a de-service, this traffic will be forwarded to the corresponding active node providing that service.
 
-### Querying of de-service
+In fact, we will utilize the Chord algorithm to find the corresponding data based on the hash of the register\_name. For more details, you can continue reading the section about the Distributed Hash Table (DHT).
+
+[chord.md](../advanced-topic/chord.md "mention")
+
+### Lookup of de-service
 
 De-services can declare themselves as "alive" by using polling. This will help them maintain a relatively higher position in the de-service provider list. When a requester needs to request a de-service, it should first use the "service lookup" command to find the nodes that provide the required service:
 
