@@ -4,15 +4,14 @@
 
 * [🚀 Start Here](README.md)
 
-### Native Node
+## Native Node
 
 * [Native Node](install-a-native-node.md)
 * [Host a Native Node](host-a-native-node.md)
 
-### Wasm Node (WebAssembly for Browsers)
+## Wasm Node (WebAssembly for Browsers)
+
 * [Build for Wasm](build-for-wasm.md)
-
-
 * [Connect Rings Network](introduction/connect-rings-network.md)
 
 ## Advanced topic
@@ -31,3 +30,7 @@
 ***
 
 * [External message handler](external-message-handler.md)
+
+## examples
+
+* [Decentralized Service Examples](examples/decentralized-service-examples.md)
