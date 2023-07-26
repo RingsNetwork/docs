@@ -1,7 +1,5 @@
 # Decentralized services
 
-
-
 <figure><img src="../.gitbook/assets/Elder_Ryan_webassembly_p2p_network_627824ef-f0b8-4887-ab7b-c166dac4b4ad.png" alt=""><figcaption></figcaption></figure>
 
 Rings Network enables users to integrate services into its decentralized network. Its underlying mechanism relies on Rings DHT for service registration and discovery. Setting up hidden services is a straightforward process that decentralizes any service with just a few simple steps.
@@ -142,4 +140,4 @@ Once all the configurations are set up, you can use the command `rings run` to s
 
 ## An example of de-service
 
-[An example of de-service](../examples/decentralized-services-example.md)
+[decentralized-service-examples.md](../examples/decentralized-service-examples.md "mention")
