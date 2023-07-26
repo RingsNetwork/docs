@@ -93,7 +93,7 @@ curl -X POST \
 "http://127.0.0.1:50000"
 ```
 
-## Backend&#x20;
+## Backend
 
 Backends can be classified into various types based on different transmission protocols, such as TCP-Backend, HTTP-Backend, and WASM-Backend. The essence of a backend is that it acts as a custom message handler. It must have a service name and a delegated service path.
 
@@ -139,3 +139,7 @@ backend:
 ```
 
 Once all the configurations are set up, you can use the command `rings run` to start hosting your decentralized services.
+
+## An example of de-service
+
+[An example of de-service](../examples/decentralized-services-example.md)

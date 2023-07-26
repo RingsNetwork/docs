@@ -3,10 +3,17 @@
 ## Introduction
 
 * [🚀 Start Here](README.md)
-* [Install Native Node](getting-started.md)
+
+### Native Node
+
+* [Native Node](install-a-native-node.md)
 * [Host a Native Node](host-a-native-node.md)
+
+### Wasm Node (WebAssembly for Browsers)
 * [Build for Wasm](build-for-wasm.md)
-* [Touch Network](introduction/touch-network.md)
+
+
+* [Connect Rings Network](introduction/connect-rings-network.md)
 
 ## Advanced topic
 
