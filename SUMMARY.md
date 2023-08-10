@@ -21,7 +21,7 @@
 * [Exchange SDP](advanced-topic/exchange-sdp.md)
 * [DHT - Network Layer](advanced-topic/chord.md)
 * [API](jsonrpc.md)
-* [Understand Abstract Account](advanced-topic/understand-abstract-account.md)
+* [Account Abstraction](advanced-topic/account-abstraction.md)
 * [config.yaml](advanced-topic/config.yaml.md)
 
 ## Features
