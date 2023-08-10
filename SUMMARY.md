@@ -21,6 +21,7 @@
 * [Exchange SDP](advanced-topic/exchange-sdp.md)
 * [DHT - Network Layer](advanced-topic/chord.md)
 * [API](jsonrpc.md)
+* [Understanding Keypair Delegation](advanced-topic/understanding-keypair-delegation.md)
 * [config.yaml](advanced-topic/config.yaml.md)
 
 ## Features
