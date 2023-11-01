@@ -8,13 +8,11 @@ The design goal of Rings Network is to enable nodes to run in any environment, i
 
 #### Transport Layer
 
-The implementation of WebRTC and WebAssembly in Rings Network provides several advantages for users. Firstly, the browser-based approach means that users do not need to install any additional software or plugins to participate in the network. Secondly, the use of WebRTC and WebAssembly enables the network to have a low latency and high throughput, making it suitable for real-time communication and data transfer.
+The Transport implementation in Rings Network is based on WebRTC, making Rings Network browser-native.
 
-WebRTC, or Web Real-Time Communication, provides browsers and mobile apps with real-time communication capabilities through simple APIs. With WebRTC, users can easily send audio, video, and data streams directly between browsers, without the need for any plug-ins or extra software. At the same time, the Rings Network has some special optimizations for the WebRTC handshakes process.
+The browser-native approach means that users do not need to install any additional software or plugins to participate in the network. Furthermore, the use of WebRTC and WebAssembly enables the network to achieve low latency and high throughput, making it suitable for real-time communication and data transfer.
 
 Assuming Node A and Node B want to create a WebRTC connection, they would need to exchange a minimum of three messages with each other:
-
-
 
 **ICE Scheme:**
 
@@ -28,9 +26,7 @@ The Rings Network is a structured peer-to-peer network that incorporates a distr
 
 #### Protocol Layer
 
-In the protocol layer, the central design concept revolves around the utilization of a Decentralized Identifier (DID), which constitutes a finite ring in abstract algebra. The DID is a
-
-\-bit identifier that enables the construction of a mathematical structure that encompasses the characteristics of both a group and a field. It is comprised of a set of elements with two binary operations, addition and multiplication, which satisfy a set of axioms such as associativity, commutativity, and distributivity. The ring is deemed finite due to its having a finite number of elements. Finite rings are widely employed in various domains of mathematics and computer science, including cryptography and coding theory.
+In the protocol layer, the central design concept revolves around the utilization of a Decentralized Identifier (DID), which constitutes a finite ring in abstract algebra. The DID is a identifier that enables the construction of a mathematical structure that encompasses the characteristics of both a group and a field. It is comprised of a set of elements with two binary operations, addition and multiplication, which satisfy a set of axioms such as associativity, commutativity, and distributivity. The ring is deemed finite due to its having a finite number of elements. Finite rings are widely employed in various domains of mathematics and computer science, including cryptography and coding theory.
 
 #### Application Layer
 
